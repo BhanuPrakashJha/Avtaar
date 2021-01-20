@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Your Avataar!</title>
+    <link rel="stylesheet" href="/WebsiteAd/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sofia&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div style="text-align: center; margin-top: 70px;" class="refresh">
+        <label>Enter Your Name To Check Your Avataar!</label> <br> <br>
+
+
+        <div class="design">
+            <input type="text" id="nameid"> <br>
+            <img src="/WebsiteAd/Screenshot_2021-01-20 How To Create a Customer Avatar In 5 Simple Steps Create An Avatar.png"
+                alt="#img" height="200" width="200" class="imgcng"> <br>
+            <button id="cl">ClickMe</button> <br>
+            <button id="rf">refresh</button>
+        </div>
+
+
+        <div class="footer">
+            <p>Blue Bash Production</p>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#cl').click(function (evt) {
+                const name = $('#nameid').val();
+                alert(name);
+                $('.imgcng').attr('src', `https://joeschmoe.io/api/v1/${name}`);
+            });
+        });
+
+        $(document).ready(function () {
+            $("#rf").click(function () {
+                location.reload(true);
+            });
+        });
+
+    </script>
+</body>
+
+</html>
